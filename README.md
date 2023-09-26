@@ -93,7 +93,37 @@ EXPOSE 3000`
 
 ![Push a docker hub](/images/Paso4Img2.png)
 
-![Push a docker hub](/images/Paso4Img3.png)
+![Paso4Img3](/images/Paso4Img3.png)
+
+# 5: persistir la base de datos
+
++ 1: Inicialmente creamos nuestro volumen
+
+`docker volume create todo-db`
+
++ 2: Detenemos y eliminamos el contenedor que está corriendo
+
+`docker rm -f <id>`
+
++ 3: Iniciamos un nuevo contenedor con el volumen creado previamente
+
+`docker run -dp 127.0.0.1:3000:3000 --mount type=volume,src=todo-db,target=/etc/todos getting-started`
+
+![Creación de volumen](/images/Paso5Img1.png)
+
+![Vista de volumen creado](/images/Paso5Img2.png)
+
++ 4: Procedemos entonces a agregar items en nuestra app
+
+![Items TodoApp](/images/Paso5Img3.png)
+
++ 5: Detenemos el contenedor, lo eliminamos y procedemos a iniciar uno nuevo con el volumen creado
+
+![Ejecución de nuevo contenedor](/images/Paso5Img4.png)
+
+Al verificar en nuestra aplicación, evidenciamos que la lista de items se graba correctamente
+
+![Verificación de items](/images/Paso5Img5.png)
 
 
 
