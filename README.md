@@ -40,4 +40,33 @@ EXPOSE 3000`
 
 ![Revisión de aplicación](/images/Paso2Img6.png)
 
+# Parte 3: Actualizar aplicación
+
+## Ajustamos el código fuente
+
++ 1: Actualizamos el nuevo texto que queremos mostrar en nuestra aplicación
+
+![Ajuste de código](/images/Paso3Img1.png)
+
++ 2: Procedemos entonces a actualizar nuestra vesión de la imagen, pero antes debemos retirar el contenedor viejo
+
+`docker stop 5208c88b882b`
+
+`docker rm 5208c88b882b`
+
+`docker build -t getting-started .`
+
+![Remove de contenedor viejo](/images/Paso3Ing2.png)
+
+![Actualizar imágen](/images/Paso3Img3.png)
+
++ 3: Iniciamos nuestro nuevo contenedor con el código previamente actualizado:
+
+`docker run -dp 127.0.0.1:3000:3000 getting-started`
+
+![Actualizar imágen](/images/Paso3Img4.png)
+
+![Actualizar imágen](/images/Paso3Img5.png)
+
+
 
