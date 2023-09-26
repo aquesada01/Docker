@@ -69,4 +69,33 @@ EXPOSE 3000`
 ![Actualizar imágen](/images/Paso3Img5.png)
 
 
+# 4: Comparte la aplicación
+
+## Crear un repositorio
+
++ 1: Creamos un repositorio en Docker Hub
+
+![Creación de repositorio](/images/Paso4Img1.png)
+
+## Hacemos push a la imagen de Docker
+
++ 1: Inicialmente nos logueamos en Docker Hub
+
+`docker login -u YOUR-USER-NAME`
+
++ 2: Utilizamos el comando de docker tag para renombrar la imágen
+
+`docker tag getting-started YOUR-USER-NAME/getting-started`
+
++ 3: Hacemos push a nuestra imágen
+
+`docker push YOUR-USER-NAME/getting-started`
+
+![Push a docker hub](/images/Paso4Img2.png)
+
+![Push a docker hub](/images/Paso4Img3.png)
+
+
+
+
 
