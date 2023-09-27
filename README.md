@@ -172,15 +172,15 @@ Al verificar en nuestra aplicación, evidenciamos que la lista de items se graba
      `node:18-alpine \ `
      `sh -c "yarn install && yarn run dev"`
     
-    ![Comando Docker run](/images/Paso6cdd1.png)
+    ![Comando Docker run](/images/Paso6pcdd1.png)
 
 + 3: Puedes ver los registros usando docker logs container-id. Sabrás que estás listo para comenzar cuando veas esto:
 
-    ![Comando Docker logs](/images/Paso6cdd2.png)
+    ![Comando Docker logs](/images/Paso6pcdd2.png)
 
 + 4: Cuando haya terminado de ver los registros, salga presionando Ctrl+ C.
 
-    ![Salir](/images/Paso6cdd3.png)
+    ![Salir](/images/Paso6pcdd3.png)
 
 ## Desarrolla tu aplicación con el contenedor de desarrollo
 
@@ -309,15 +309,15 @@ Al verificar en nuestra aplicación, evidenciamos que la lista de items se graba
 
 + 1: Primero defina el nuevo servicio y asígnele un nombre mysqlpara que obtenga automáticamente el alias de red. También especifique la imagen que se utilizará.
 
-      ![Definir servicio](/images/Paso8dsm1.png)
+    ![Definir servicio](/images/Paso8dsm1.png)
 
 + 2: A continuación, defina la asignación de volumen. Cuando ejecutó el contenedor con docker run, Docker creó el volumen nombrado automáticamente. Sin embargo, eso no sucede cuando se ejecuta con Compose. 
 
-      ![Definir asiugnación de volumen](/images/Paso8dsm2.png)
+    ![Definir asiugnación de volumen](/images/Paso8dsm2.png)
 
 + 3: Finalmente, debe especificar las variables de entorno.
 
-      ![Especificar variables de entorno](/images/Paso8dsm3.png)
+    ![Especificar variables de entorno](/images/Paso8dsm3.png)
 
 ## Ejecute la pila de aplicaciones
 
